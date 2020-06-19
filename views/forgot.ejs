@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>forgot_password</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form action="/forgot" method="POST">
+        <img src="./images/logo.jpg" style="width:300px;height:150px;"> <br>
+
+
+        <% if(hasErrors) {%> <br>
+        <div class="alertbox">
+          <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a> -->
+          <% _.forEach(messages, function(error){ %>
+          <%= error %>
+          <% }) %>
+
+        </div>
+        <% } %>
+
+
+
+
+        <input type="email" name="email" placeholder="Email" required='true' />
+        <br>
+        <button type="submit">Reset Password</button>
+      </form>
+    </div>
+    <div class="overlay-container">
+      <div class="overlay">
+
+        <div class="overlay-panel overlay-right ">
+          <h1>Forgot your password?</h1> <br> <br>
+          <p>It would take hardly a minute to get back!</p>
+          <br> Wanna go back to Sign In? <br> <br>
+          <button onclick="window.location.href='signin';">Sign In Now!
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Created by <i class="fa fa-heart"></i>
+        <a target="_blank" href="About.html">Team Text Connector</a>
+      </p>
+    </footer>
+
+</body>
+
+</html>

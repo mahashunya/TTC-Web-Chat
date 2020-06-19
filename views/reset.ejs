@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>reset-password</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+
+    body {
+      background: #780206;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #061161, #780206);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #061161, #780206);
+
+
+
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      font-family: 'Montserrat', sans-serif;
+      height: 100vh;
+      margin: -20px 0 50px;
+    }
+
+    h1 {
+      font-weight: bold;
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    h3 {
+      text-align: center;
+    }
+
+    p {
+      font-size: 15px;
+      font-weight: 100;
+      line-height: 20px;
+      letter-spacing: 0.5px;
+      margin: 20px 0 30px;
+    }
+
+
+
+
+
+    button {
+      border-radius: 20px;
+      border: 0px solid black;
+      background: #000000;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to bottom, #434343, #000000);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to bottom, #434343, #000000);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+      color: #FFFFFF;
+      font-size: 12px;
+      font-weight: bold;
+      padding: 12px 45px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      /* transition: transform 80ms ease-in; */
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+
+    button:focus {
+      outline: none;
+    }
+
+    /* button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+} */
+
+    form {
+      border-radius: 10px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+      position: relative;
+      overflow: hidden;
+      background-color: #FFFFFF;
+      display: flex;
+      align-self: center;
+      justify-content: center;
+      flex-direction: column;
+      padding: 10px 40px;
+      margin: 100px;
+      height: 100%;
+      text-align: center;
+    }
+
+    input {
+      border-radius: 5px;
+      background-color: #eee;
+      border: none;
+      padding: 12px 15px;
+      margin: 8px 0;
+      width: 100%;
+    }
+
+    .row {
+
+      border-radius: 10px;
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+        0 10px 10px rgba(0, 0, 0, 0.22);
+      position: relative;
+      overflow: hidden;
+      width: 600px;
+      max-width: 100%;
+      min-height: 480px;
+      height: 600px;
+      /* fallback for old browsers */
+   background-image: linear-gradient(to right top, #061161, #061165, #061169, #06116d, #061171);
+
+
+    }
+    footer {
+    background-color: #222;
+    color: #fff;
+    font-size: 14px;
+    bottom: 0;
+    position: fixed;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 999;
+    }
+    footer p {
+      margin: 10px 0;
+       
+    }
+
+    .alertbox {
+      font-size: 14px !important;
+
+      color: red;
+
+    }
+
+    footer i {
+      color: red;
+    }
+
+    footer a {
+      color: #3c97bf;
+      text-decoration: none;
+    }
+
+    .form-container {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      /* transition: all 0.6s ease-in-out; */
+    }
+  </style>
+</head>
+
+<body>
+  <br> <br>
+  <div class="row">
+    <div class="col-md-12">
+      <form action="/reset/<%= token %>" method="POST">
+        <h1>Password Reset </h1> <br>
+
+        
+        <div class="form-group">
+
+         
+          <label for="email"></label>
+          <input type="email" name="email" value="" placeholder="Email" autofocus="autofocus" class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="password"></label>
+          <input type="password" name="password" value="" minlength="5" placeholder="New password" autofocus="autofocus"
+            class="form-control" />
+        </div>
+        <div class="form-group">
+          <label for="confirm"></label>
+          <input type="password" name="confirm" value="" minlength="5" placeholder="Confirm password" class="form-control" />
+        </div> <br>
+        <div class="form-group">
+          <button type="submit" class="btn">Update Password</button>
+        </div> <br>
+      </form>
+    </div>
+  </div> <br>
+  <footer>
+    <p>
+      Created by Team Text Connector</a>
+    </p>
+  </footer>
+</body>
+
+</html>

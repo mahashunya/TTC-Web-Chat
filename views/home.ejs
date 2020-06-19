@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+
+<body>
+
+<%- include ("./partials/navbar.ejs") %>
+<br />
+
+
+  
+  <div class="col-md-12">
+    <form action="#" method="post">
+      <div class="form-group ad-30" style="margin-top:8px;">
+        <div class="input-group search-style">
+          <input class="form-control new-search-bar" name="groupType" id="search" placeholder="Enter Your Group Name"
+            type="text">
+          <span class="input-group-btn">
+            <button class="btn input-btn" type="" id="search-form" style="font-weight: 300;">Search</button>
+          </span>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="col-md-12">
+    <input type="hidden" id="name-user" value="<%= user.name  %>" >
+    <input type="hidden" id="name-image" value="<%= user.userImage  %>">
+    <div class="">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="row"> <br>
+            <div class="col-md-12">
+
+              <div class="filter-container">
+                <div class="card">
+                  <form action="#" method="post">
+                    <div class="content">
+                      <p class="filter">
+                        FILTER YOUR GROUPS
+                      </p>
+                      <hr />
+                      <select class="form-control" name="groupType" id="groupType">
+                        <option value="">Filter By Type</option>
+                        <% _.forEach(groupType,function (value) { %>
+                        <option value="<%= value._id %>"><%=value._id %>
+                        </option>
+
+                        <% }) %>
+
+                      </select>
+                      <div class="clearfix"></div>
+                      <button style="box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.52);font-weight: 300;" class="btn add-apply">Apply</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col-md-9">
+          <div>
+            <% _.forEach(chunks, function(val){ %>
+
+            <div class="category-list">
+              <div class="row">
+                <% _.forEach(val, function(val2){ %>
+                <form action="/home" method="POST" id="favorite">
+                  <div class="item col-md-4">
+                    <a href="/group/<%= val2.groupname %>">
+                      <div class="thumbnail" style="box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.52)">
+                        <img style=" height:200px;box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+                0 10px 10px rgba(0, 0, 0, 0.52);" src="https://textconnect7.s3.amazonaws.com/<%= val2.image %>" alt="">
+                        <div class="caption">
+                          <h4>
+                            <%=val2.groupname  %> (<%= val2.groupMembers.length %>)
+                          </h4>
+
+                          <div class="row">
+                            <div class="col-xs-12 col-md-6">
+                              <p>
+                                <%= val2.groupType %>
+                              </p>
+                            </div>
+
+                            <div class="col-xs-12 col-md-6">
+                              <input type="hidden" name="id" id="id" value="<%= val2._id %>">
+                              <input type="hidden" name="clubName" id="club_Name" value="<%= val2.groupname %>">
+                              <button class="btn add-fav" style="font-weight: 400;">
+                                Add To Favorite
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </form>
+                <% })  %>
+              </div>
+            </div>
+            <% })  %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+  integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/group/groupchat.js"></script>
+<script src="/js/group/sendrequest.js"></script>
+<script src="/js/home.js" ></script>
+<script src="/js/global.js"></script>
+</body>
+</html>
