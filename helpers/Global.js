@@ -14,20 +14,20 @@ class Global {
     return roomName;
   }
 
-  // RemoveUser(id) {
-  //   var user = this.GetUser(id);
-  //   if (user) {
-  //     this.users = this.globalRoom.filter((user) => user.id !== id);
-  //   }
-  //   return user;
-  // }
+  RemoveUser(id) {
+    var user = this.GetUser(id);
+    if (user) {
+      this.users = this.globalRoom.filter((user) => user.id !== id);
+    }
+    return user;
+  }
 
-  // GetUser(id) {
-  //   var getUser = this.globalRoom.filter((userId) => {
-  //     return userId.id === id;
-  //   })[0];
-  //   return getUser;
-  // }
+  GetUser(id) {
+    var getUser = this.globalRoom.filter((userId) => {
+      return userId.id === id;
+    })[0];
+    return getUser;
+  }
 
   GetRoomList(room) {
     var roomName = this.globalRoom.filter((user) => user.room === room);

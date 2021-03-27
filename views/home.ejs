@@ -13,13 +13,13 @@
 
 <body>
 
-<%- include ("./partials/navbar.ejs") %>
-<br />
+  <%- include ("./partials/navbar.ejs") %>
+  <br />
 
 
-  
+
   <div class="col-md-12">
-    <form action="#" method="post">
+    <form action="/results" method="post">
       <div class="form-group ad-30" style="margin-top:8px;">
         <div class="input-group search-style">
           <input class="form-control new-search-bar" name="groupType" id="search" placeholder="Enter Your Group Name"
@@ -33,17 +33,21 @@
   </div>
 
   <div class="col-md-12">
-    <input type="hidden" id="name-user" value="<%= user.name  %>" >
+    <input type="hidden" id="name-user" value="<%= user.name  %>">
     <input type="hidden" id="name-image" value="<%= user.userImage  %>">
     <div class="">
       <div class="row">
         <div class="col-md-3">
-          <div class="row"> <br>
+         
+          <div class="row"> <br><a href="/dashboard"><button style="color: black;box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
+  0 10px 10px rgba(0, 0, 0, 0.52);font-weight: 300; margin-left: 35px;" class="btn btn btn-success"> Create a New
+              Group</button></a>
             <div class="col-md-12">
-
+              <br>
               <div class="filter-container">
+                 
                 <div class="card">
-                  <form action="#" method="post">
+                  <form action="/results" method="post">
                     <div class="content">
                       <p class="filter">
                         FILTER YOUR GROUPS
@@ -78,7 +82,7 @@
                 <% _.forEach(val, function(val2){ %>
                 <form action="/home" method="POST" id="favorite">
                   <div class="item col-md-4">
-                    <a href="/group/<%= val2.groupname %>">
+                    <a href="/group/<%= val2.groupname.replace(/ /g,"-") %>">
                       <div class="thumbnail" style="box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
                 0 10px 10px rgba(0, 0, 0, 0.52)">
                         <img style=" height:200px;box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
@@ -127,7 +131,10 @@
 <script src="/socket.io/socket.io.js"></script>
 <script src="/js/group/groupchat.js"></script>
 <script src="/js/group/sendrequest.js"></script>
-<script src="/js/home.js" ></script>
+<script src="/js/home.js"></script>
+<script src="/js/deparam.js"></script>
 <script src="/js/global.js"></script>
+<script src="/js/messagelink.js"></script>
 </body>
+
 </html>

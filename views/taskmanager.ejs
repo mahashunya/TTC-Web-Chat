@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/tm.css" />
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <script src="https://kit.fontawesome.com/c20b6998e9.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Task Manager</title>
+  <style>
+    ul {
+      list-style-type: none!important;
+      margin: 0!important;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+    }
+
+    li a {
+      display: block!important;
+      color: white!important;
+      text-align: center!important;
+      padding: 14px 16px!important;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #111!important;
+    }
+
+    .active {
+      background-color: #4CAF50!important;
+    }
+  </style>
+  
+</head>
+
+<body>
+ <ul>
+   <li><a href="/home">Back to Home</a></li>
+   <li><a href="/members">Members</a></li>
+   
+   <li style="float:right"><a class="active" href="About.html">About Us</a></li>
+ </ul>
+  <center>
+    <br /> <br> <br> <div style="width: 768px; align-items: center; border-radius: 5px; background-color: white;" >
+    <h1 class="h2">TASK MANAGER</h1>
+    </div> <br>
+    <div style="width: 768px; align-items: center; border-radius: 5px; background-color: gray;" >
+    <h1 class="h2">Hello <%= user.name %>! Add your Taks here</h1>
+    </div>
+    <br />
+    <div style="width: 768px; height: 300px; border-radius: 7px;" class="dip">
+      <div  class="container my-2 mx-3"></div> <br>
+        <form method="POST" action="" id="tm">
+          <div class="form-group row"> 
+            <label class="col-sm-2 col-form-label" for="Name">
+              
+               <b>Task:</b>  </label>
+            <br />
+            <input type="text" id="name" name="Task" placeholder="Enter your Task" required /><br />
+          </div>
+          <fieldset class="form-group">
+            <div  class="row" style="text-align: left; margin-left: 18px;">
+              <legend class="col-form-label col-sm-2 pt-0"><b>Status</b> </legend>
+              <div class="col-sm-10">
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="Status" id="Ongoing" value="Ongoing" />
+                  <label  style="text-align: left;" class="form-check-label" for="Ongoing">
+                    Ongoing
+                  </label>
+                </div>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="Status" id="Completed" value="Completed" />
+                  <label class="form-check-label" for="Completed">
+                    Completed
+                  </label>
+                </div>
+                <div class="form-check" >
+                  <input class="form-check-input" type="radio" name="Status" id="Not yet started" value="Not yet started" />
+                  <label class="form-check-label" for="Not yet Started">
+                    Not yet started
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+          <input type="submit" name="submit" value="Submit" id="submit " class="btn btn-md btn-success" />
+        </form>
+      </div>
+    </div>
+    <h1></h1>
+  </center>
+  <footer>
+    <p>
+      Created by <i class="fa fa-heart"></i>
+      <a target="_blank" href="About.html">Team Text Connector</a>
+    </p>
+  </footer>
+
+</body>
+
+</html>

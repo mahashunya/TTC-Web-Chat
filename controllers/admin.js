@@ -10,8 +10,13 @@ module.exports = function (formidable,Team,aws) {
     },
 
     adminPage: function (req, res) {
+        if (req.user === undefined) {
+          res.redirect('/signin');
+
+
+        } else {
       res.render('admin/dashboard');
-    },
+    }},
 
     adminPostPage: function (req, res) {
       const newTeam = new Team();

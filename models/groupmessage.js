@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-
-var groupMessage = mongoose.Schema({
-    sender: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+var Schema = mongoose.Schema
+var groupMessage = new Schema({
+    sender: {type: mongoose.Schema.Types.ObjectId, ref: 'usersses'},
     body: {type: String},
     name: {type: String},
     createdAt: {type: Date, default: Date.now}

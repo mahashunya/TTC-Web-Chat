@@ -7,9 +7,14 @@ const simpleDependencies = [
   ['_', 'lodash'],
   ['async', 'async'],
   ['mongoose', 'mongoose'],
-  ['passport', 'passport'],['formidable','formidable'],
-  ['Team', './models/clubs'], ['aws', './helpers/AWSUpload'],['Users','./models/user']
-  
+  ['passport', 'passport'],
+  ['formidable', 'formidable'],
+  ['Team', './models/clubs'],
+  ['aws', './helpers/AWSUpload'],
+  ['Users', './models/user'],
+  ['Message', './models/message'],['Image','./models/image'],
+  ['Group','./models/groupmessage']
+
 ];
 
 simpleDependencies.forEach(function (val) {

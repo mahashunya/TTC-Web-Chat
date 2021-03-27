@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,800");
 
 body {
-  font-family: 'Montserrat',
-    sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.42857143;
   background: #780206;
@@ -13,16 +12,14 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-
 h1 {
   font-size: 38px;
-  color: #5C5C5B;
+  color: #5c5c5b;
 }
-
 
 h2 {
   font-size: 32px;
-  color: #5C5C5B;
+  color: #5c5c5b;
   margin-top: 0px;
 }
 
@@ -42,20 +39,17 @@ h3 {
 .dropdown-toggle:active,
 .open .dropdown-toggle {
   color: white;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
-    0 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
   position: relative;
   background: black !important;
   border: none !important;
-
 }
 
 .margin-80 {
-  margin-bottom: 80px
+  margin-bottom: 80px;
 }
 
 .new_message_head button {
-
   background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
   border: medium none;
   outline: 0;
@@ -68,18 +62,12 @@ h3 {
 }
 
 .new_message_head {
-background: #000000!important;
-/* fallback for old browsers */
-background: -webkit-linear-gradient(to bottom, #434343, #000000) !important;
-/* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to bottom, #434343, #000000) !important;
-
+  background: rgb(20, 20, 20) !important;
 
   position: relative;
-  color: white!important;
+  color: white !important;
   border-radius: 5px;
   /* fallback for old browsers */
-
 
   float: left;
   font-size: 13px;
@@ -94,8 +82,7 @@ background: linear-gradient(to bottom, #434343, #000000) !important;
 }
 
 .chat_area {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
-    0 10px 10px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12);
   position: relative;
   background: white;
   float: left;
@@ -119,7 +106,6 @@ background: linear-gradient(to bottom, #434343, #000000) !important;
 }
 
 .chat_area li {
-
   padding: 14px 14px 0;
 }
 
@@ -137,18 +123,21 @@ background: linear-gradient(to bottom, #434343, #000000) !important;
 }
 
 .message_write {
-  background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(214, 214, 214, 1) 0%, rgba(214, 213, 213, 1) 100%);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(214, 214, 214, 1) 0%,
+    rgba(214, 213, 213, 1) 100%
+  );
   border-radius: 5px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
   float: left;
   padding: 15px;
   width: 100%;
 }
 
 .message_write textarea.form-control {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-    0 10px 10px rgba(0, 0, 0, 0.22) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22) !important;
   height: 70px;
   padding: 10px;
 }
@@ -170,7 +159,6 @@ member_list li:hover {
   color: gray;
 }
 
-
 .btn:hover,
 .btn:focus,
 .btn:active {
@@ -185,9 +173,8 @@ member_list li:hover {
   margin-bottom: 30px;
 }
 
-
 .card {
-  background: none repeat scroll 0 0 #FFFFFF;
+  background: none repeat scroll 0 0 #ffffff;
   border-radius: 4px;
   color: #444444;
 }
@@ -213,8 +200,7 @@ member_list li:hover {
 }
 
 .card .user {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
-    0 10px 10px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12) !important;
   border-radius: 50%;
   display: block;
   height: 120px;
@@ -224,16 +210,14 @@ member_list li:hover {
 }
 
 .card .user img {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
-    0 10px 10px rgba(0, 0, 0, 0.12) !important;
-  background: none repeat scroll 0 0 #FFFFFF;
-  border: 4px solid #FFFFFF;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12) !important;
+  background: none repeat scroll 0 0 #ffffff;
+  border: 4px solid #ffffff;
   width: 100%;
 }
 
 .card .content {
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15),
-    0 10px 10px rgba(0, 0, 0, 0.12) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.12) !important;
   position: relative;
   background-color: rgba(0, 0, 0, 0);
 
@@ -241,27 +225,23 @@ member_list li:hover {
 }
 
 .card .main {
-
   min-height: 160px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .card .back .content .main {
-
   height: 215px;
   overflow-x: hidden;
   overflow-y: auto;
 }
 
 .card .name {
-
   font-size: 22px;
   line-height: 28px;
   margin: 10px 0 0;
   text-align: center;
 }
-
 
 .card .profession-online {
   color: #999999;
@@ -278,15 +258,12 @@ member_list li:hover {
 }
 
 .card .footer {
-  border-top: 1px solid #EEEEEE;
+  border-top: 1px solid #eeeeee;
   color: #999999;
   margin: 30px 0 0;
   padding: 10px 0 0;
   text-align: center;
 }
-
-
-
 
 .main-scroll {
   height: 300px;
@@ -307,7 +284,6 @@ member_list li:hover {
 .club_name,
 .club_fans {
   color: black;
-
 }
 
 .bl {
@@ -334,7 +310,7 @@ member_list li:hover {
 .chat-name {
   font-size: 15px;
   font-weight: 600;
-  color: #9993B9 !important;
+  color: #9993b9 !important;
 }
 
 .modal {
@@ -348,7 +324,7 @@ member_list li:hover {
 }
 
 .modal-title {
-  color: #9993B9;
+  color: #9993b9;
 }
 
 #nameLink {
@@ -368,9 +344,7 @@ member_list li:hover {
 }
 
 .modal-content {
-
-  background: #C1A5A9;
-
+  background: #c1a5a9;
 
   margin: 15% auto;
   padding: 20px;
@@ -385,13 +359,13 @@ member_list li:hover {
 #val {
   cursor: pointer;
   text-decoration: none;
-  color: #9993B9;
+  color: #9993b9;
 }
 
 .nav-label-icon {
   top: -9px;
   position: relative;
-  background: #76E7CD;
+  background: #76e7cd;
   padding: 5px;
 }
 
@@ -414,7 +388,7 @@ member_list li:hover {
 }
 
 .dropdown-tag {
-  background: #9993B9;
+  background: #9993b9;
   color: black;
   padding: 4px;
   margin-bottom: 15px;
@@ -439,12 +413,19 @@ member_list li:hover {
 }
 
 .drop-accept {
-  background: #9993B9 !important;
-  border: #9993B9;
-  color: black!important;
+  background: #9993b9 !important;
+  border: #9993b9;
+  color: black !important;
   text-shadow: none;
 }
 
 #reload {
   padding: 0px 15px 0px 15px;
 }
+/* latest changes by rishabh */
+#hidden-link {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+/* latest changes by rishabh */
